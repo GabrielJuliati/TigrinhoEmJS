@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Tesouro e Bomba</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div>
+   <div class="container text-center" id="setupScreen">
+     <header>
+       <h1>Jogo de tigrinho</h1>
+      </header>
+      <div class="form-group">
+       <label for="playerName">Nome do Jogador:</label>
+       <input type="text" id="playerName" class="form-control" placeholder="Digite seu nome">
+      </div>
+      <div class="form-group">
+       <label for="playerMoney">Valor da Aposta:</label>
+       <input type="number" id="playerMoney" class="form-control" placeholder="Digite a quantidade a apostar" step="0.01" min="0.01">
+     </div>
+     <button id="startButton" class="btn btn-primary" onclick="startGameSetup()">Começar Jogo</button>
+   </div>
+
+   <div class="container text-center d-none" id="gameScreen">
+     <h1>Jogo de tigrinho</h1>
+     <p id="message" class="text-primary">Clique nas células para encontrar os diamantes. Evite a bomba!</p>
+     <p id="playerInfo" class="text-muted"></p>
+      <div id="gameBoard"></div>
+     <button id="restartButton" class="btn btn-primary d-none" onclick="startGame()">Reiniciar Jogo</button>
+     <button id="backButton" class="btn btn-secondary" onclick="returnToSetup()">Voltar</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
